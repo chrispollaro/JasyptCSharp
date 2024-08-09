@@ -72,7 +72,7 @@ public class JasyptCompatibleEncryption
         return ((KeyParameter)parameters.Parameters).GetKey();
     }
 
-        private static BufferedBlockCipher SetupCipher(bool forEncryption, byte[] key, byte[] iv)
+    private static BufferedBlockCipher SetupCipher(bool forEncryption, byte[] key, byte[] iv)
     {
         IBlockCipher engine = new AesEngine();
         BufferedBlockCipher cipher = new PaddedBufferedBlockCipher(new CbcBlockCipher(engine), new Pkcs7Padding());
